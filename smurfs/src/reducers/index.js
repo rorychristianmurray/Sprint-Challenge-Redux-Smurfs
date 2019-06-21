@@ -31,7 +31,8 @@ import {
 const initialState = {
   smurfs: [],
   fetching: false,
-  error: null
+  error: null,
+  addingSmurf: false
 };
 
 export default (state = initialState, action) => {
@@ -53,6 +54,25 @@ export default (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
+        error: action.payload
+      };
+    case ADD_SMURF_START:
+      return {
+        ...state,
+        addingSmurf: true,
+        error: null
+      };
+    case ADD_SMURF_SUCCESS:
+      return {
+        ...state,
+        addingSmurf: false,
+        error: null,
+        smurfs: action.payload
+      };
+    case ADD_SMURF_ERROR:
+      return {
+        ...state,
+        addingSmurf: false,
         error: action.payload
       };
     default:

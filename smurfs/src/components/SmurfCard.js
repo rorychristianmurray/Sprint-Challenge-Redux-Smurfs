@@ -13,4 +13,3 @@ const SmurfCard = props => {
 };
 
 export default SmurfCard;
-props;

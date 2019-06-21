@@ -10,7 +10,7 @@ class SmurfList extends Component {
   }
 
   render() {
-    console.log(this.props.smurfs);
+    console.log("SmurfList this.props.smurfs", this.props.smurfs);
     return (
       <div>
         {this.props.smurfs.map(smurf => {

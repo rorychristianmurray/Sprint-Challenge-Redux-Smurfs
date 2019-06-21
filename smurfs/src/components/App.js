@@ -11,8 +11,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to Smurfberia</h1>
-        <h4>The place where bad Smurfs go to be re-educated</h4>
+        {/* <h1>Welcome to Smurfberia</h1>
+        <h4>The place where bad Smurfs go to be re-educated</h4> */}
         <SmurfList />
       </div>
     );
