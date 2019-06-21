@@ -63,13 +63,13 @@ export const addSmurf = newSmurf => dispatch => {
 export const deleteSmurf = id => dispatch => {
   dispatch({ type: DELETE_SMURF_START });
   axios
-    .delete("http://localhost:3333/smurfs/:id", id)
+    .delete(`http://localhost:3333/smurfs/${id}`)
     .then(response => {
       console.log("deleteSmurfs response.data", response.data);
       dispatch({ type: DELETE_SMURF_SUCCESS, payload: response.data });
     })
     .catch(error => {
-      console.log("addSmurfs error", error);
+      console.log("deleteSmurfs error", error);
       dispatch({
         type: DELETE_SMURF_ERROR,
         payload: error
