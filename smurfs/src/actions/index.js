@@ -14,6 +14,25 @@
    D - deleteSmurf
 */
 
+import axios from "axios";
+
 export const FETCH_SMURF_START = "FETCH_SMURF_START";
 export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCES";
 export const FETCH_SMURF_ERROR = "FETCH_SMURF_ERROR";
+
+export const getSmurfs = () => dispatch => {
+  dispatch({ type: FETCH_SMURF_START });
+  axios
+    .get("http://localhost:3333/smurfs")
+    .then(response => {
+      console.log("getSmurfs response.data", response.data);
+      dispatch({ type: FETCH_SMURF_SUCCESS, payload: response.data });
+    })
+    .catch(error => {
+      console.log("getSmurfs error", error);
+      dispatch({
+        type: FETCH_SMURF_ERROR,
+        payload: error.response.data.error
+      });
+    });
+};
