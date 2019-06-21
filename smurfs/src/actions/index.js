@@ -40,7 +40,7 @@ export const getSmurfs = () => dispatch => {
     });
 };
 
-export const addSmurfs = newSmurf => dispatch => {
+export const addSmurf = newSmurf => dispatch => {
   dispatch({ type: ADD_SMURF_START });
   axios
     .post("http://localhost:3333/smurfs", newSmurf)
