@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getSmurfs } from "../actions";
+import SmurfCard from "./SmurfCard";
 
 class SmurfList extends Component {
   componentDidMount() {
