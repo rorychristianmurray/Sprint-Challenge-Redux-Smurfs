@@ -13,3 +13,7 @@
    U - updateSmurf
    D - deleteSmurf
 */
+
+export const FETCH_SMURF_START = "FETCH_SMURF_START";
+export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCES";
+export const FETCH_SMURF_ERROR = "FETCH_SMURF_ERROR";
