@@ -3,6 +3,11 @@ import { connect } from "react-redux";
 import { deleteSmurf } from "../actions";
 
 class SmurfCard extends Component {
+  deleteSmurf = event => {
+    event.preventDefault();
+    this.props.deleteSmurf(this.props.smurf.id);
+  };
+
   render() {
     return (
       <div>
